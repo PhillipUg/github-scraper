@@ -9,11 +9,13 @@ require 'open-uri'
 	# username = 'phillipug'
 	# page_urls = []
 
+
 	def overview_page(username)
 		url = "https://github.com/"
 		url + username 
 	end
 
+	# user_url = overview_page(username)
 
 	def get_profile_info(user_url)
 		user_summary = []
@@ -32,6 +34,29 @@ require 'open-uri'
 		end
 		user_summary
 	end
+
+	def get_page(page, user_url)
+		page_url = user_url + '?tab=' + page
+		html = Nokogiri::HTML.parse(URI.open(page_url))
+
+		case 
+		when page == 'repositories' then get_repos(html)
+		when page == 'stars' then get_stars(html)
+		when page == 'followers' then get_followers(html)
+		when page == 'following' then get_following(html)
+		else
+			raise 'Error!, category invalid'
+		end
+	end
+
+	
+	
+
+	# p get_page(user_url, "repositories")
+
+	# def lister(page_url)
+		
+	# end
 
 	# user_url = overview_page(username)
 
@@ -56,25 +81,41 @@ require 'open-uri'
 # 	p item.css('span.repo').text
 # end
 
-# repos = repos_page.css('li.public')
-# repos.each do |repo|
-# 	p repo.css('h3').text.gsub(/\n/, '').gsub(' ', '')
-# end
+def get_repos(html)
+	repos = html.css('li.public')
+	counter = 1
+	repos.each do |repo|
+	puts "#{counter}. " + repo.css('h3').text.gsub(/\n/, '').gsub(' ', '')
+	counter += 1
+	end
+end
 
-# stars = stars_page.css('div.d-block')
-# stars.each do |star|
-# 	p star.css('h3').text.gsub(/\n/, '').gsub(' ', '')
-# end
+def get_stars(html)
+	stars = html.css('div.d-block')
+	counter = 1
+	stars.each do |star|
+	puts "#{counter}. " + star.css('h3').text.gsub(/\n/, '').gsub(' ', '')
+	counter += 1
+	end
+end
 
-# followers = followers_page.css('div.table-fixed')
-# followers.each do |follower|
-# 	p follower.css('span.f4').text
-# end
+def get_followers(html)
+	followers = html.css('div.table-fixed')
+	counter = 1
+	followers.each do |follower|
+	puts "#{counter}. " + follower.css('span.f4').text
+	counter += 1
+	end
+end
 
-# following = following_page.css('div.table-fixed')
-# following.each do |user|
-# 	p user.css('span.f4').text
-# end
+def get_following(html)
+	following = html.css('div.table-fixed')
+	counter = 1
+	following.each do |user|
+	puts "#{counter}. " + user.css('span.f4').text
+	counter += 1
+	end
+end
 
 
 
