@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/scrapper.rb'
+require_relative '../lib/scraper.rb'
 
 def display_output(array)
 
@@ -18,12 +18,19 @@ def display_output(array)
 	puts "Website: #{array[5]}"
 	puts ""
 	puts "---------------------------------"
-	puts ""
+	puts "pinned Repositories"
+	puts "---------------------------------"
+	puts "1. #{array[12]}"
+	puts "2. #{array[13]}"
+	puts "3. #{array[14]}"
+	puts "4. #{array[15]}"
+	puts "5. #{array[16]}"
+	puts "6. #{array[17]}"
+	puts "--------------------------------"
 end
 
 
 def display_prompt(summary_info, scraper)
-	puts "----------------------------"
 	puts ""
 	puts "repositories: #{summary_info[7]}"
 	puts "stars: #{summary_info[9]}"
@@ -31,9 +38,13 @@ def display_prompt(summary_info, scraper)
 	puts "following: #{summary_info[11]}"
 	puts ""
 	puts "Enter a category name to get a list of its contents e.g. enter 'repositories' or 'stars'"
+
 	puts ""
 	list = scraper.get_page(gets.chomp)
-	list.each {|item| puts item}
+	puts "-------------------"
+	list.each {|item| puts item }
+	puts "-------------------"
+
 end
 
 puts ""
@@ -46,10 +57,10 @@ display_output(array = Array.new(12, 'xxxxx'))
 puts ""
 
 puts "Enter any Github username: "
-
+begin
 scraper = Scraper.new(gets.chomp)
-puts "Invalid Github username" unless scraper.valid
-exit unless scraper.valid
+puts "Invalid!, Enter a valid Github Username: " unless scraper.valid
+end until scraper.valid
 
 
 summary_info = scraper.get_profile_info
