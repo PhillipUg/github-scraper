@@ -52,7 +52,7 @@ puts "Welcome!. This is a github scraping tool."
 puts ""
 puts "All you have to do is input any github username and it shall do the rest."
 
-display_output(array = Array.new(12, 'xxxxx'))
+display_output(array = Array.new(18, 'xxxxx'))
 
 puts ""
 
