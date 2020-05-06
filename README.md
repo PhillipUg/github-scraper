@@ -132,8 +132,7 @@ If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 
 You can try it live on [repl.it](https://repl.it/@PhillipUg/github-scraper)
 
 <!-- CONTACT -->
-## Contacts
-
+## Contact
 
 👤 **Phillip Musiime**
 
