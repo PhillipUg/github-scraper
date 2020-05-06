@@ -1,5 +1,5 @@
-# web-scraper
-A Website Scraping Tool developed in Ruby
+# Github Scraper
+A Github Scraping Tool developed in Ruby
 
 
 <!--
@@ -21,28 +21,28 @@ A Website Scraping Tool developed in Ruby
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![Run on Repl.it](https://repl.it/badge/github/adamclasic/tictactoe)](https://repl.it/@PhillipUg/tictactoe )
+[![Run on Repl.it][replit-sheild]][replit-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/adamclasic/tictactoe">
+  <a href="https://github.com/PhillipUg/github-scraper">
     <img src="images/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h1 align="center">Tic Tac Toe</h1>
+  <h1 align="center">Github Scraper</h1>
 
   <p align="center">
     This project is part of the Microverse curriculum in Ruby module!
     <br />
-    <a href="https://github.com/adamclasic/tictactoe"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/PhillipUg/github-scraper"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://repl.it/@PhillipUg/tictactoe ">View Demo</a>
+    <a href="https://repl.it/@PhillipUg/github-scraper ">View Demo</a>
     ·
-    <a href="https://github.com/adamclasic/tictactoe/issues">Report Bug</a>
+    <a href="https://github.com/PhillipUg/github-scraper/issues">Report Bug</a>
     ·
-    <a href="https://github.com/adamclasic/tictactoe/issues">Request Feature</a>
+    <a href="https://github.com/PhillipUg/github-scraper/issues">Request Feature</a>
   </p>
 </p>
 
@@ -60,104 +60,80 @@ A Website Scraping Tool developed in Ruby
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://repl.it/@PhillipUg/tictactoe )
+[![Product Name Screen Shot][product-screenshot]][screenshot-url]
 
 This is the third project of the Microverse Ruby Module
-
-This is also the first project of the [Odin project curriculum](https://www.theodinproject.com/courses/ruby-programming/lessons/oop)
 
 <!-- ABOUT THE PROJECT -->
 ## Installation
 
-To play this game you need to:
+To use this scraper this is what you need to:
 * have ruby installed in your computer
-* [download](https://github.com/adamclasic/tictactoe/archive/master.zip) or clone this repo:
+* [download](https://github.com/PhillipUg/github-scraper/archive/master.zip) or clone this repo:
   - Clone with SSH:
   ```
-    git@github.com:adamclasic/tictactoe.git
+    git@github.com:PhillipUg/github-scraper.git
   ```
   - Clone with HTTPS
   ```
-    https://github.com/adamclasic/tictactoe.git
+    https://github.com/PhillipUg/github-scraper.git
   ```
-* and execute bin/main.rb file using your terminal
+* cd into `github-scraper` directory and run `bundle install`
+* Finally, run `bin/main.rb` in your terminal.
 
-## Game Rules
+## How to use
+When you first run this github scraping tool it begins by showing you the summary info output format
 
-  * This is a customized version of the original [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe) game. The basic rules remain unchanged, the tokens to play with have changed instead.
-
-  * The game is played on a 3 by 3 grid
-  ```
-      X  |   X   |   X    
-    ----------------------
-      X  |   O   |   O    
-    ----------------------
-      X  |   X   |   X      
-  ```
-
-  * In this game, there are only two letters to play with 'X' and 'O'. Whichever player gets the first similar letters in an entire row, column or diagonal WINS!!!.
-  * At the begining of the game, player 1 will choose either 'X' or 'O' and the other letter will be assigned to player 2 automatically.
-  * Once the players both have letters to play with, they will use numbers 1 through 9 to select a position on the game board. for example:
-    ```
-      Player playing with 'X' enters position '2'.
-
-          1   2   3  
-        -------------
-      1 |   | X |   | 3
-        -------------
-      4 |   |   |   | 6
-        -------------
-      7 |   |   |   | 9
-        -------------
-          7   8   9    
-
-      Player playing with 'O' enter position '5'.
-
-          1   2   3  
-        -------------
-      1 |   |   |   | 3
-        -------------
-      4 |   | O |   | 6
-        -------------
-      7 |   |   |   | 9
-        -------------
-          7   8   9   
-    ```
-    * The first player to get their letters in a row (up, down, across, or diagonally) wins e.g.
-    ```
+```
+   Github User
+  -------------------------------
   
+  Name: xxxxxx (xxxxxx)
+  
+  Bio: xxxxxx
+  
+  Work: xxxxxx
+  
+  Location: xxxxxx  
+  Website: xxxxxx  
+  ---------------------------------
+  pinned Repositories
+  ---------------------------------
+  1. xxxxxx
+  2. xxxxxx
+  3. xxxxxx
+  4. xxxxxx
+  5. xxxxxx
+  6. xxxxxx
+  --------------------------------
+```
 
-          X | O | O    X | X | X     X | O | O     O | O | O
-         -----------  -----------   -----------  -----------
-          X | X | O    O | O | O     X | X | O     O | X | O
-         -----------  -----------   -----------  -----------
-          X | X | X    X | X | X     O | O | O     O | X | O
-    ```
-    * When all squares are full and no player has won, then game ends in as a Draw e.g.
+After this, you are prompted to enter a valid github username. Then it returns the above output format with all the information filled in.
 
-      ```
-           O   |  X   |  O     
-        ----------------------
-           O   |  X   |  X    
-        ----------------------
-           X   |  O   |  O     
-      ```
-
-
-
+```
+  Categories
+  ---------------------------------
+  repositories: xxxxxx
+  stars: xxxxxx
+  followers: xxxxxx
+  following: xxxxxx
+  ----------------------------------
+```
+Then you will be prompted to enter a category name to see a full list of its contents. For instance enter `repositories` or `stars` to get a list of those scrapped categories. This will continue until you break out of the application using `CTRL+C`
 
 ### Built With
 This project was built using these technologies.
 * Ruby
 * Rspec
+* Nokogiri gem
 
 ### Testing
-If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 3.9.1` but any version not older than `3.0`should work fine. Clone this repo to your local machine, cd into tictactoe directory and run `rspec`
+If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 3.9.1` but any version not older than `3.0`should work fine. Clone this repo to your local machine, cd into github-scraper directory and run `rspec`
 
 <!-- LIVE VERSION -->
 ## Live version
 
-You can see it working [here](https://repl.it/@PhillipUg/tictactoe )
+You can try it live on [replit-url](https://repl.it/@PhillipUg/github-scraper )
 
 <!-- CONTACT -->
 ## Contributors
@@ -170,31 +146,25 @@ You can see it working [here](https://repl.it/@PhillipUg/tictactoe )
 - Twitter: [@Phillip_Ug](https://twitter.com/Phillip_Ug)
 - E-mail: phillipmusiime@gmail.com
 
-👤 **Abderrahmane Adam Allalou**
-
-- LinkedIn: [Abderrahmane Adam Allalou](https://www.linkedin.com/in/abderrahmane-allalou/)
-- GitHub: [@adamclasic](https://github.com/adamclasic)
-- E-mail: aabou9@gmail.com
-
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Microverse](https://www.microverse.org/)
-* [The Odin Project](https://www.theodinproject.com/)
 * [Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
-* [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/adamclasic/tictactoe.svg?style=flat-square
-[contributors-url]: https://github.com/adamclasic/tictactoe/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/adamclasic/tictactoe.svg?style=flat-square
-[forks-url]: https://github.com/adamclasic/tictactoe/network/members
-[stars-shield]: https://img.shields.io/github/stars/adamclasic/tictactoe.svg?style=flat-square
-[stars-url]: https://github.com/adamclasic/tictactoe/stargazers
-[issues-shield]: https://img.shields.io/github/issues/adamclasic/tictactoe.svg?style=flat-square
-[issues-url]: https://github.com/adamclasic/tictactoe/issues
-[product-screenshot]: images/tic-tac-toe.png
+[contributors-shield]: https://img.shields.io/github/contributors/PhillipUg/github-scraper.svg?style=flat-square
+[contributors-url]: https://github.com/PhillipUg/github-scraper/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/PhillipUg/github-scraper.svg?style=flat-square
+[forks-url]: https://github.com/PhillipUg/github-scraper/network/members
+[stars-shield]: https://img.shields.io/github/stars/PhillipUg/github-scraper.svg?style=flat-square
+[stars-url]: https://github.com/PhillipUg/github-scraper/stargazers
+[issues-shield]: https://img.shields.io/github/issues/PhillipUg/github-scraper.svg?style=flat-square
+[issues-url]: https://github.com/PhillipUg/github-scraper/issues
+[replit-sheild]: https://repl.it/badge/github/PhillipUg/github-scraper
+[replit-url]: https://repl.it/@PhillipUg/github-scraper
+[product-screenshot]: images/scraper.gif
+[screenshot-url]: https://repl.it/@PhillipUg/github-scraper
 
 ## 📝 License
 
