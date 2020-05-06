@@ -27,7 +27,7 @@ A Github Scraping Tool developed in Ruby
 <br />
 <p align="center">
   <a href="https://github.com/PhillipUg/github-scraper">
-    <img src="images/microverse.png" alt="Logo" width="80" height="80">
+    <img src="images/github-scraper.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Github Scraper</h1>
