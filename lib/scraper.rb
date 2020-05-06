@@ -99,10 +99,10 @@ class Scraper
     page_url = @user_url + '?tab=' + page
     @html = Nokogiri::HTML.parse(URI.open(page_url))
 
-    if page == 'repositories' then get_repos
-    elsif page == 'stars' then get_stars
-    elsif page == 'followers' then get_followers
-    elsif page == 'following' then get_following
+    if page == 'repositories' then repos
+    elsif page == 'stars' then stars
+    elsif page == 'followers' then followers
+    elsif page == 'following' then following
     else
       ['Error!, category invalid']
     end

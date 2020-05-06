@@ -58,6 +58,7 @@ puts 'Enter any Github username: '
 # rubocop:disable Lint/Loop
 begin
   scraper = Scraper.new(gets.chomp)
+  puts '----------------------'
   puts 'Invalid!, Enter a valid Github Username: ' unless scraper.valid
 end until scraper.valid
 # rubocop:enable Lint/Loop
