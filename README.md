@@ -68,8 +68,8 @@ This is the third project of the Microverse Ruby Module
 ## Installation
 
 To use this scraper this is what you need to:
-* have ruby installed in your computer
-* [download](https://github.com/PhillipUg/github-scraper/archive/master.zip) or clone this repo:
+* Have ruby installed in your computer
+* [Download](https://github.com/PhillipUg/github-scraper/archive/master.zip) or clone this repo:
   - Clone with SSH:
   ```
     git@github.com:PhillipUg/github-scraper.git
@@ -78,7 +78,7 @@ To use this scraper this is what you need to:
   ```
     https://github.com/PhillipUg/github-scraper.git
   ```
-* cd into `github-scraper` directory and run `bundle install`
+* `cd` into `github-scraper` directory and run `bundle install`
 * Finally, run `bin/main.rb` in your terminal.
 
 ## How to use
@@ -86,14 +86,10 @@ When you first run this github scraping tool it begins by showing you the summar
 
 ```
    Github User
-  -------------------------------
-  
-  Name: xxxxxx (xxxxxx)
-  
-  Bio: xxxxxx
-  
-  Work: xxxxxx
-  
+  -------------------------------  
+  Name: xxxxxx (xxxxxx)  
+  Bio: xxxxxx  
+  Work: xxxxxx  
   Location: xxxxxx  
   Website: xxxxxx  
   ---------------------------------
@@ -133,10 +129,10 @@ If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 
 <!-- LIVE VERSION -->
 ## Live version
 
-You can try it live on [replit-url](https://repl.it/@PhillipUg/github-scraper )
+You can try it live on [repl.it](https://repl.it/@PhillipUg/github-scraper)
 
 <!-- CONTACT -->
-## Contributors
+## Contacts
 
 
 👤 **Phillip Musiime**
