@@ -60,9 +60,9 @@ A Github Scraping Tool developed in Ruby
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]][screenshot-url]
+This is Github Scrapping Tool built with ruby. This Tools is built as a capstone project for completing one of Microverse's Main Technical Curriculum sections.
 
-This is the third project of the Microverse Ruby Module
+[![Product Name Screen Shot][product-screenshot]][screenshot-url]
 
 <!-- ABOUT THE PROJECT -->
 ## Installation
