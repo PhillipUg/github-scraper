@@ -4,6 +4,6 @@ class User
   def initialize
     @counters = []
     @summary = []
-    @pinned	= []
+    @pinned	= [] # rubocop:disable Layout/Tab
   end
 end
