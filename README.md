@@ -1,5 +1,5 @@
 # Github Scraper
-A Github Scraping Tool developed in Ruby
+A Github Scraping Tool developed with Ruby and the Nokogiri gem
 
 
 <!--
