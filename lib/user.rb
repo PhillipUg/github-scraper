@@ -1,8 +1,8 @@
 class User
-  attr_accessor :name, :nickname, :work, :bio, :location, :website, :pinned, :counters, :summary
+  attr_writer :name, :nickname, :work, :bio, :location, :website, :pinned
+  attr_reader :pinned, :summary, :name, :nickname, :work, :bio, :location, :website
 
   def initialize
-    @counters = []
     @summary = []
     @pinned	= [] # rubocop:disable Layout/Tab
   end
