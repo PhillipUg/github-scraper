@@ -46,6 +46,8 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+Layout/Tab:
+  Enabled: false
 
 Lint/RaiseException:
   Enabled: false
