@@ -122,6 +122,7 @@ This project was built using these technologies.
 * Ruby
 * Rspec
 * Nokogiri gem
+* Colorize gem
 
 ### Testing
 If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 3.9.1` but any version not older than `3.0`should work fine. Clone this repo to your local machine, cd into github-scraper directory and run `rspec`
@@ -130,6 +131,9 @@ If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 
 ## Live version
 
 You can try it live on [repl.it](https://repl.it/@PhillipUg/github-scraper)
+
+## Video Demo
+In this [video demo](https://www.loom.com/share/9ba92a37201e43d981c3675af86dc5ad) i summarily take you through how i built the scraper
 
 <!-- CONTACT -->
 ## Contact
