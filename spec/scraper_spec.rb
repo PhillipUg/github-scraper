@@ -15,48 +15,55 @@ RSpec.describe Scraper do
 
   describe '#name' do
     it 'should get scrapped name and set it to user name' do
-      expect(scraper1.name).to eq('Phillip Musiime')
+      result = scraper1.send(:name)
+      expect(result).to eq('Phillip Musiime')
     end
   end
 
   describe '#nickname' do
     it 'should get scrapped nickname and set it to user nickname' do
-      expect(scraper1.nickname).to eq('PhillipUg')
+      result = scraper1.send(:nickname)
+      expect(result).to eq('PhillipUg')
     end
   end
 
   describe '#work' do
     it 'should get scrapped work and set it to user work' do
-      expect(scraper1.work).to eq('Freelance Full Stack Developer')
+      result = scraper1.send(:work)
+      expect(result).to eq('Freelance Full Stack Developer')
     end
   end
 
   describe '#location' do
     it 'should get scrapped location and set it to user location' do
-      expect(scraper1.location).to eq('remote')
+      result = scraper1.send(:location)
+      expect(result).to eq('remote')
     end
   end
 
   describe '#website' do
     it 'should get scrapped website and set it to user website' do
-      expect(scraper1.website).to eq('https://www.linkedin.com/in/phillip-musiime-74657019a/')
+      result = scraper1.send(:website)
+      expect(result).to eq('https://www.linkedin.com/in/phillip-musiime-74657019a/')
     end
   end
 
   describe '#bio' do
     it 'should get scrapped bio and set it to user bio' do
-      expect(scraper1.bio).to eq('JavaScript, Ruby, Ruby on Rails, React, SQL, HTML/CSS --Open to new job opportunities.')
+      result = scraper1.send(:bio)
+      expect(result).to eq('JavaScript, Ruby, Ruby on Rails, React, SQL, HTML/CSS --Open to new job opportunities.')
     end
   end
 
   describe '#pinned_repos' do
     it 'should get scrapped pinned repos and set it to user pinned repos' do
-      result = scraper1.pinned_repos
+      result = scraper1.send(:pinned_repos)
       expect(result).to include('bubble-sort')
     end
 
     it 'should return an array of pinned repositories' do
-      expect(scraper1.pinned_repos).to be_an Array
+      result = scraper1.send(:pinned_repos)
+      expect(result).to be_an Array
     end
   end
 
@@ -73,11 +80,12 @@ RSpec.describe Scraper do
 
   describe '#counters' do
     it 'should get scrapped number of each category and add it to user summary array' do
-      expect(scraper1.counters).to be_an Array
+      result = scraper1.send(:counters)
+      expect(result).to be_an Array
     end
 
     it 'returned array should include numbers of each category' do
-      result = scraper1.counters
+      result = scraper1.send(:counters)
       expect(result.any?(Integer)).to be true
     end
   end
@@ -93,31 +101,35 @@ RSpec.describe Scraper do
 
     it 'returned array should include category items' do
       result = scraper1.page('repositories')
-      expect(result).to include('1. github-scraper')
+      expect(result).to include('github-scraper')
     end
   end
 
   describe '#repos' do
     it 'should get scrapped user repos and add them to an array' do
-      expect(scraper1.page('repositories')).to be_an Array
+      result = scraper1.send(:page, 'repositories')
+      expect(result).to be_an Array
     end
   end
 
   describe '#stars' do
     it 'should get scrapped user stars and add them to an array' do
-      expect(scraper1.page('stars')).to be_an Array
+      result = scraper1.send(:page, 'stars')
+      expect(result).to be_an Array
     end
   end
 
   describe '#followers' do
     it 'should get scrapped user followers and add them to an array' do
-      expect(scraper1.page('followers')).to be_an Array
+      result = scraper1.send(:page, "followers")
+      expect(result).to be_an Array
     end
   end
 
   describe '#following' do
     it 'should get scrapped user following and add them to an array' do
-      expect(scraper1.page('following')).to be_an Array
+      result = scraper1.send(:page, "following")
+      expect(result).to be_an Array
     end
   end
 end
