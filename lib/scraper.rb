@@ -31,6 +31,39 @@ class Scraper
     counters
   end
 
+  def page(page)
+    exit if page == 'q' || page == 'quit'
+    page_url = @user_url + '?tab=' + page
+    @html = Nokogiri::HTML.parse(URI.open(page_url))
+
+    if page == 'repositories' then repos
+    elsif page == 'stars' then stars
+    elsif page == 'followers' then followers
+    elsif page == 'following' then following
+    else
+      ['Error!, category invalid']
+    end
+  end
+
+  def profile_info
+    user_summary = []
+    [
+      @user.name,
+      @user.nickname,
+      @user.bio,
+      @user.work,
+      @user.location,
+      @user.website
+    ].each { |item| user_summary << item }
+
+    @user.summary.each { |item| user_summary << item }
+    @user.pinned.each { |item| user_summary << item }
+
+    user_summary
+  end
+
+  private
+
   def name
     name = @profile_page.css('span.p-name')
     @user.name = (name ? name.text : '![ field blank ]')
@@ -61,22 +94,6 @@ class Scraper
     @user.bio = (bio ? bio.text.gsub(/\n/, '') : '![ field blank ]')
   end
 
-  def profile_info
-    user_summary = []
-    [
-      @user.name,
-      @user.nickname,
-      @user.bio,
-      @user.work,
-      @user.location,
-      @user.website
-    ].each { |item| user_summary << item }
-
-    @user.summary.each { |item| user_summary << item }
-    @user.pinned.each { |item| user_summary << item }
-
-    user_summary
-  end
 
   def pinned_repos
     pinned_repos = @profile_page.css('.pinned-item-list-item')
@@ -95,59 +112,39 @@ class Scraper
     @user.summary
   end
 
-  def page(page)
-    page_url = @user_url + '?tab=' + page
-    @html = Nokogiri::HTML.parse(URI.open(page_url))
-
-    if page == 'repositories' then repos
-    elsif page == 'stars' then stars
-    elsif page == 'followers' then followers
-    elsif page == 'following' then following
-    else
-      ['Error!, category invalid']
-    end
-  end
 
   def repos
     repos = @html.css('li.public')
-    counter = 1
     repoz = []
     repos.each do |repo|
-      repoz << ("#{counter}. " + repo.css('h3').text.gsub(/\n/, '').gsub(' ', ''))
-      counter += 1
+      repoz << repo.css('h3').text.gsub(/\n/, '').gsub(' ', '')
     end
     repoz
   end
 
   def stars
     stars = @html.css('div.d-block')
-    counter = 1
     starz = []
     stars.each do |star|
-      starz << ("#{counter}. " + star.css('h3').text.gsub(/\n/, '').gsub(' ', ''))
-      counter += 1
+      starz << star.css('h3').text.gsub(/\n/, '').gsub(' ', '')
     end
     starz
   end
 
   def followers
     followers = @html.css('div.table-fixed')
-    counter = 1
     followerz = []
     followers.each do |follower|
-      followerz << ("#{counter}. " + follower.css('span.f4').text)
-      counter += 1
+      followerz << follower.css('span.f4').text
     end
     followerz
   end
 
   def following
     following = @html.css('div.table-fixed')
-    counter = 1
     followingz = []
     following.each do |user|
-      followingz << ("#{counter}. " + user.css('span.f4').text)
-      counter += 1
+      followingz << user.css('span.f4').text
     end
     followingz
   end
