@@ -115,7 +115,7 @@ After this, you are prompted to enter a valid github username. Then it returns t
   following: xxxxxx
   ----------------------------------
 ```
-Then you will be prompted to enter a category name to see a full list of its contents. For instance enter `repositories` or `stars` to get a list of those scrapped categories. This will continue until you break out of the application using `CTRL+C`
+Then you will be prompted to enter a category name to see a full list of its contents. For instance enter `repositories` or `stars` to get a list of those scrapped categories. This will continue until you exit the program by typing `q` in the terminal and pressing Enter.
 
 ### Built With
 This project was built using these technologies.
