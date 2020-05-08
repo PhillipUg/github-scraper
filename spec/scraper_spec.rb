@@ -93,7 +93,7 @@ RSpec.describe Scraper do
 
     it 'returned array should include category items' do
       result = scraper1.page('repositories')
-      expect(result).to include('1. web-scraper')
+      expect(result).to include('1. github-scraper')
     end
   end
 
