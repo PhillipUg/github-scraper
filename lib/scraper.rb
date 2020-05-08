@@ -32,7 +32,8 @@ class Scraper
   end
 
   def page(page)
-    exit if page == 'q' || page == 'quit'
+    exit if page == 'q'
+
     page_url = @user_url + '?tab=' + page
     @html = Nokogiri::HTML.parse(URI.open(page_url))
 
@@ -94,7 +95,6 @@ class Scraper
     @user.bio = (bio ? bio.text.gsub(/\n/, '') : '![ field blank ]')
   end
 
-
   def pinned_repos
     pinned_repos = @profile_page.css('.pinned-item-list-item')
     pinned = []
@@ -111,7 +111,6 @@ class Scraper
     end
     @user.summary
   end
-
 
   def repos
     repos = @html.css('li.public')

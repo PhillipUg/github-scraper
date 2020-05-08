@@ -121,14 +121,14 @@ RSpec.describe Scraper do
 
   describe '#followers' do
     it 'should get scrapped user followers and add them to an array' do
-      result = scraper1.send(:page, "followers")
+      result = scraper1.send(:page, 'followers')
       expect(result).to be_an Array
     end
   end
 
   describe '#following' do
     it 'should get scrapped user following and add them to an array' do
-      result = scraper1.send(:page, "following")
+      result = scraper1.send(:page, 'following')
       expect(result).to be_an Array
     end
   end

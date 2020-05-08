@@ -4,6 +4,6 @@ class User
 
   def initialize
     @summary = []
-    @pinned	= [] # rubocop:disable Layout/Tab
+    @pinned	= []
   end
 end
