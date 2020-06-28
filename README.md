@@ -140,7 +140,7 @@ In this [video demo](https://www.loom.com/share/9ba92a37201e43d981c3675af86dc5ad
 
 👤 **Phillip Musiime**
 
-- LinkedIn: [Phillip Musiime](https://www.linkedin.com/in/phillip-musiime-74657019a/)
+- LinkedIn: [Phillip Musiime](https://www.linkedin.com/in/phillip-musiime)
 - GitHub: [PhillipUg](https://github.com/PhillipUg)
 - Twitter: [@Phillip_Ug](https://twitter.com/Phillip_Ug)
 - E-mail: phillipmusiime@gmail.com
