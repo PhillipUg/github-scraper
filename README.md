@@ -133,7 +133,7 @@ If you wish to test it. Install `Rspec`with `gem install rspec`. We used `rspec 
 You can try it live on [repl.it](https://repl.it/@PhillipUg/github-scraper)
 
 ## Video Demo
-In this [video demo](https://www.loom.com/share/9ba92a37201e43d981c3675af86dc5ad) i summarily take you through how i built the scraper
+Check out [this video](https://www.loom.com/share/9ba92a37201e43d981c3675af86dc5ad) demonstration of how I built the scraper.
 
 <!-- CONTACT -->
 ## Contact
